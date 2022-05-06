@@ -15,5 +15,3 @@ package org.example;
 public class Accion {
     public Grado Grado;
 }
-
-hello world
