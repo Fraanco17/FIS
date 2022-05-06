@@ -16,4 +16,3 @@ public class Accion {
     public Grado Grado;
 
 }
-pedin codin
