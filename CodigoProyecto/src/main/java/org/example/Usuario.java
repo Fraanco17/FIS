@@ -39,14 +39,17 @@ public class Usuario implements IUsuario {
 		int cont=0;
 		String dniNew;
 		cont++;
-		if(DNI == dniIN){
+		if(DNI.equals(dniIN)){
 			contrasenia=sc.nextLine();
-		}else if (cont==3) {
-			System.out.println("El DNI se ha introducido incorrectamente más de 3 veces");
-		}else if (cont<3){
-			System.out.println("El DNI introducido no es correcto");
-			dniNew=sc.nextLine();
-			cambiarContrasenia(dniNew);
+		}else{
+			do{
+				System.out.println("El DNI introducido no es correcto");
+				dniNew=sc.nextLine();
+				if(DNI.equals(dniNew)){
+					System.out.println("Introduzca la nueva contraseña: \n");
+					contrasenia= sc.nextLine();
+				}
+			}while(cont<4);
 		}
 
 	}
