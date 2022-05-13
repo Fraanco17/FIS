@@ -14,16 +14,18 @@ package org.example;
 
 
 public class CUsuario implements ICUsuario {
-	public Usuario Usuario;
-	public void crear(String dni, String nombre, String apellidos, String contrasenia) {
-	
+	private Usuario usuario;
+
+	public void CUsuario (String dni, String nombre, String apellidos, String contrasenia) {
+		usuario.Usuario(dni,nombre,apellidos,contrasenia);
 	}
-	
-	public void obtener() {
-	
+
+	public Usuario obtener() {
+		return usuario;
 	}
-	
+
 	public void destroy() {
-	
+		usuario.destroy();
 	}
+
 }

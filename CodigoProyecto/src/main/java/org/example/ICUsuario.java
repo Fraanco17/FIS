@@ -14,4 +14,6 @@ package org.example;
 
 
 public interface ICUsuario {
+    void CUsuario (String dni, String nombre, String apellidos, String contrasenia);
 }
+
