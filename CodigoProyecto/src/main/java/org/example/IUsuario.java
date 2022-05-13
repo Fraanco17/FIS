@@ -22,6 +22,5 @@ public interface IUsuario {
 	void setNombre(String nombre);
 	void setApellidos(String apellidos);
 	void setContrasenia(String contrasenia);
-	
 	void destroy();
 }
