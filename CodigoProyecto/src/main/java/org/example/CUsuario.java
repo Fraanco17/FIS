@@ -11,10 +11,15 @@ package org.example;
 //
 
 
-
+import javax.swing.*;
 
 public class CUsuario implements ICUsuario {
 	private Usuario usuario;
+	private GUI_CUsuario gui;
+
+	public CUsuario() {
+		gui=new GUI_CUsuario(this);
+	}
 
 	public void CUsuario (String dni, String nombre, String apellidos, String contrasenia) {
 		usuario.Usuario(dni,nombre,apellidos,contrasenia);
@@ -28,4 +33,7 @@ public class CUsuario implements ICUsuario {
 		usuario.destroy();
 	}
 
+    public GUI_CUsuario getGUI() {
+		return gui;
+    }
 }

@@ -14,4 +14,14 @@ package org.example;
 
 
 public class GUI_CUsuario {
+
+    private final ICUsuario controlador;
+
+    public GUI_CUsuario(ICUsuario entrada){
+        this.controlador = entrada;
+
+    }
+
+    public void show() {
+    }
 }

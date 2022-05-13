@@ -22,10 +22,9 @@ public class Sensores extends DispositivosIot {
 	}
 
 	public void generaMedidas() {
-	
+
 	}
 
-	
 	public void setTipoSensor(String tipo) {
 		this.tipoSensores=tipo;
 	}
