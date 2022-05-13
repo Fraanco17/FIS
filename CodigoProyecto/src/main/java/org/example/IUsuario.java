@@ -15,6 +15,13 @@ package org.example;
 
 public interface IUsuario {
 	void Usuario(String dni, String nombre, String apellidos, String contrasenia);
+	String getDNI();
+	String getNombre();
+	String getApellidos();
+	void setDNI(String DNI);
+	void setNombre(String nombre);
+	void setApellidos(String apellidos);
+	void setContrasenia(String contrasenia);
 	
 	void destroy();
 }
