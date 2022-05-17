@@ -23,5 +23,6 @@ public class GUI_CUsuario {
     }
 
     public void show() {
+        System.out.println("Hola puta");
     }
 }
