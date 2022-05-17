@@ -14,4 +14,13 @@ package org.example;
 
 
 public class GUI_CAula {
+    private final ICAula controlador;
+
+    public GUI_CAula(ICAula entrada){
+        this.controlador=entrada;
+    }
+
+    public void show(){
+    }
+
 }

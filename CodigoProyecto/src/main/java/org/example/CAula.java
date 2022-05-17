@@ -15,8 +15,11 @@ package org.example;
 
 public class CAula implements ICAula {
 	public Aula Aula;
+	private GUI_CAula gui;
 
-	public void crear(String nombreCentro, String idInterno, Integer aforo, Integer tipoAula) {
+	public CAula(){gui = new GUI_CAula(this);}
+
+	public void CAula(String nombreCentro, String idInterno, Integer aforo, Integer tipoAula) {
 	
 	}
 	

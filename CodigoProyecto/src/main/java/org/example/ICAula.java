@@ -14,4 +14,5 @@ package org.example;
 
 
 public interface ICAula {
+    void CAula(String nombreCentro, String idInterno, Integer aforo, Integer tipoAula);
 }
