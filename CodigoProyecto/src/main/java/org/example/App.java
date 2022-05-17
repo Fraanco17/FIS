@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Scanner;
+
 /**
  * Hello world!
  *
@@ -16,7 +18,16 @@ public class App
     }
 
     private void start() {
-        System.out.println("Buenos dias");
-        cuser.getGUI().show();
+        String var;
+        System.out.println("Buenos dias\nDesea realizar actividades con el 'aula' o con el 'usuario'");
+        Scanner sc = new Scanner(System.in);
+        var = sc.nextLine();
+        switch (var){
+            case "aula":
+                caula.getGUI().show();
+            case "usuario":
+                cuser.getGUI().show();
+        }//error
+
     }
 }

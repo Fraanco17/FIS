@@ -21,6 +21,7 @@ public class GUI_CAula {
     }
 
     public void show(){
+        System.out.println("hola mundo de 300k");
     }
 
 }

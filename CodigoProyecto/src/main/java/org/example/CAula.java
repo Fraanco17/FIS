@@ -30,4 +30,8 @@ public class CAula implements ICAula {
 	public void obtener() {
 	
 	}
+
+	public GUI_CAula getGUI() {
+		return gui;
+	}
 }
