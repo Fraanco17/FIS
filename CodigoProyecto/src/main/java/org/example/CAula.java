@@ -16,7 +16,7 @@ package org.example;
 public class CAula implements ICAula {
 	public Aula Aula;
 	private GUI_CAula guiCAula;
-	private GUI_Subscripcion guiSubscripcion;
+
 
 	public CAula(){
 		guiCAula = new GUI_CAula(this);}

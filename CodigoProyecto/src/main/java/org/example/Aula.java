@@ -11,15 +11,17 @@ package org.example;
 //
 
 
-
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Aula implements IAula {
 	private String nombreCentro;
 	private String idInterno;
 	private Integer aforo;
 	private Integer tipoAula;
+	private GUI_Subscripcion guiSubscripcion;
 	/*public PDI PDI;
-	public Observadores observador;
+
 	public CAula c_Aula;
 	public PAS PAS;
 	public Elemento elemento;
@@ -28,15 +30,9 @@ public class Aula implements IAula {
 	}*/
 
 
-
-	@Override
-	public void Aula(String nombreCentro, String idInterno, Integer aforo, Integer tipoAula) {
-		this.nombreCentro = nombreCentro;
-		this.idInterno = idInterno;
-		this.aforo = aforo;
-		this.tipoAula = tipoAula;
+	public Aula() {
+		guiSubscripcion=new GUI_Subscripcion(this);
 	}
-
 	public String getNombreCentro() {
 		return nombreCentro;
 	}
@@ -68,6 +64,16 @@ public class Aula implements IAula {
 	public void setTipoAula(Integer tipoAula) {
 		this.tipoAula = tipoAula;
 	}
+
+
+	@Override
+	public void Aula(String nombreCentro, String idInterno, Integer aforo, Integer tipoAula){
+			this.nombreCentro = nombreCentro;
+			this.idInterno = idInterno;
+			this.aforo = aforo;
+			this.tipoAula = tipoAula;
+		}
+
 
 	@Override
 	public void destroy() {

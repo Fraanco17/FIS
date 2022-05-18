@@ -11,11 +11,12 @@ package org.example;
 //
 
 
-
+import java.util.ArrayList;
 
 public class Observadores extends Usuario {
 	private String elementosContenidos;
 	public Aula aulaT;
+	private ArrayList aulas;
 
 	public void setElementosContenidos(String elem) {
 		this.elementosContenidos=elem;
