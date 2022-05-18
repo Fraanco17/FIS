@@ -11,7 +11,7 @@ package org.example;
 //
 
 
-
+import java.util.Scanner;
 
 public class Aula implements IAula {
 	private String nombreCentro;
@@ -67,6 +67,20 @@ public class Aula implements IAula {
 
 	public void setTipoAula(Integer tipoAula) {
 		this.tipoAula = tipoAula;
+	}
+
+	public void altaAula(){
+		Aula aula = new Aula();
+		System.out.println("Inserte los datos del aula:\nNombre del centro: ");
+		Scanner sc=new Scanner(System.in);
+		aula.setNombreCentro(sc.nextLine());
+		System.out.println("Identificador Interno: ");
+		aula.setIdInterno(sc.nextLine());
+		System.out.println("\nAforo maximo: ");
+		aula.setAforo(sc.nextInt());
+		System.out.println("\nTipo de aula: ");
+		aula.setTipoAula(sc.nextInt());
+
 	}
 
 	@Override
