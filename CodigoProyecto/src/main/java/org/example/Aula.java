@@ -20,6 +20,7 @@ public class Aula implements IAula {
 	private Integer aforo;
 	private Integer tipoAula;
 	private GUI_Subscripcion guiSubscripcion;
+	private ArrayList<Observadores> observadores = new ArrayList();
 	/*public PDI PDI;
 
 	public CAula c_Aula;
@@ -65,6 +66,9 @@ public class Aula implements IAula {
 		this.tipoAula = tipoAula;
 	}
 
+	public void addObservador (Observadores observador) {
+		observadores.add(observador);
+	}
 
 	@Override
 	public void Aula(String nombreCentro, String idInterno, Integer aforo, Integer tipoAula){

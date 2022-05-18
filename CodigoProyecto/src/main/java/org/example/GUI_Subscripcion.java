@@ -22,12 +22,7 @@ public class GUI_Subscripcion {
     }
 
     public void show(){
-        String var;
-        System.out.println("de que aula quiere ser observador (id interno)");
-        Scanner sc = new Scanner(System.in);
-        var = sc.next();
-
-
+        controlador.addObservador(new Observadores());
 
     }
 
