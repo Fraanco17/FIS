@@ -84,6 +84,60 @@ public class Usuario implements IUsuario {
 		this.contrasenia = contrasenia;
 	}
 
+	public void altaUsuario() {
+		Scanner sc = new Scanner(System.in);
+		int usuario;
+		System.out.println("Ha elegido dar de alta un usuario.\n" +
+				"Indique si se trata de: \n1. Alumno\n2. PDI\n3. PAS");
+		usuario = sc.nextInt();
+		switch (usuario) {
+			case 1:
+				altaAlumno();
+				break;
+			case 2:
+				altaPAS();
+				break;
+			case 3:
+				altaPDI();
+				break;
+			default:
+				System.out.println("Error puta");
+		}
+	}
+
+	private void altaAlumno() {
+		Scanner sc = new Scanner(System.in);
+		Alumnos alum = new Alumnos();
+		System.out.println("Introduzca los datos en el siguiente order: DNI, nombre, apellidos, numero de matricula y contrasenia: \n");
+		alum.setDNI(sc.nextLine());
+		alum.setNombre(sc.nextLine());
+		alum.setApellidos(sc.nextLine());
+		alum.setNumeroMatricula(sc.nextLine());
+		alum.setContrasenia(sc.nextLine());
+	}
+
+	private void altaPAS(){
+		Scanner sc = new Scanner(System.in);
+		PAS pas = new PAS();
+		System.out.println("Introduzca los datos en el siguiente order: DNI, nombre, apellidos, codigo personal y anio de incorporacion: \n \n");
+		pas.setDNI(sc.nextLine());
+		pas.setNombre(sc.nextLine());
+		pas.setApellidos(sc.nextLine());
+		pas.setCodigoPersonal(sc.nextLine());
+		pas.setAnioIncorporacion(sc.nextInt());
+	}
+
+	private void altaPDI(){
+		Scanner sc = new Scanner(System.in);
+		PDI pdi = new PDI();
+		System.out.println("Introduzca los datos en el siguiente order: DNI, nombre, apellidos, numero de trabajador y categoria PDI: \n");
+		pdi.setDNI(sc.nextLine());
+		pdi.setNombre(sc.nextLine());
+		pdi.setApellidos(sc.nextLine());
+		pdi.setCodigoTrabajador(sc.nextLine());
+		pdi.setCategoriaPDI(sc.nextLine());
+	}
+
 	@Override
 	public void destroy() {
 
