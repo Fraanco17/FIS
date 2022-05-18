@@ -25,8 +25,10 @@ public class App
         switch (var){
             case "aula":
                 caula.getGUI().show();
+                break;
             case "usuario":
                 cuser.getGUI().show();
+                break;
         }//error
 
     }
