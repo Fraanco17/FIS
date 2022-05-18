@@ -11,7 +11,7 @@ package org.example;
 //
 
 
-
+import java.util.Scanner;
 
 public class GUI_CAula {
     private final ICAula controlador;
@@ -21,7 +21,31 @@ public class GUI_CAula {
     }
 
     public void show(){
-        System.out.println("hola mundo de 300k");
+        int var;
+        System.out.println("¿Que desea hacer?\n1. Dar de alta un aula\n2. Salir");
+        Scanner sc= new Scanner(System.in);
+        var = sc.nextInt();
+        switch (var){
+            case 1:
+                altaAula();
+                break;
+            case 2:
+                break;
+        }
+    }
+
+    private void altaAula(){
+        Aula aula = new Aula();
+        System.out.println("Inserte los datos del aula:\nNombre del centro: ");
+        Scanner sc=new Scanner(System.in);
+        aula.setNombreCentro(sc.nextLine());
+        System.out.println("Identificador Interno: ");
+        aula.setIdInterno(sc.nextLine());
+        System.out.println("\nAforo maximo: ");
+        aula.setAforo(sc.nextInt());
+        System.out.println("\nTipo de aula: ");
+        aula.setTipoAula(sc.nextInt());
+
     }
 
 }

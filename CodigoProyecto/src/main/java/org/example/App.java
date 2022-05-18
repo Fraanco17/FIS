@@ -12,12 +12,11 @@ public class App
     CUsuario cuser =new CUsuario();
     CAula caula=new CAula();
 
-    public static void main( String[] args )
-    {
+    public static void main( String[] args )  {
         new App().start();
     }
 
-    private void start() {
+    private void start()  {
         String var;
         System.out.println("Buenos dias\nDesea realizar actividades con el 'aula' o con el 'usuario'");
         Scanner sc = new Scanner(System.in);
@@ -30,6 +29,7 @@ public class App
                 cuser.getGUI().show();
                 break;
         }//error
+
 
     }
 }

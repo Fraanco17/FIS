@@ -18,14 +18,14 @@ public class Aula implements IAula {
 	private String idInterno;
 	private Integer aforo;
 	private Integer tipoAula;
-	public PDI PDI;
+	/*public PDI PDI;
 	public Observadores observador;
 	public CAula c_Aula;
 	public PAS PAS;
 	public Elemento elemento;
 	public void monitorizarSensores() {
 	
-	}
+	}*/
 
 
 
@@ -34,6 +34,38 @@ public class Aula implements IAula {
 		this.nombreCentro = nombreCentro;
 		this.idInterno = idInterno;
 		this.aforo = aforo;
+		this.tipoAula = tipoAula;
+	}
+
+	public String getNombreCentro() {
+		return nombreCentro;
+	}
+
+	public void setNombreCentro(String nombreCentro) {
+		this.nombreCentro = nombreCentro;
+	}
+
+	public String getIdInterno() {
+		return idInterno;
+	}
+
+	public void setIdInterno(String idInterno) {
+		this.idInterno = idInterno;
+	}
+
+	public Integer getAforo() {
+		return aforo;
+	}
+
+	public void setAforo(Integer aforo) {
+		this.aforo = aforo;
+	}
+
+	public Integer getTipoAula() {
+		return tipoAula;
+	}
+
+	public void setTipoAula(Integer tipoAula) {
 		this.tipoAula = tipoAula;
 	}
 

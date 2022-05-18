@@ -15,9 +15,13 @@ package org.example;
 
 public class CAula implements ICAula {
 	public Aula Aula;
-	private GUI_CAula gui;
+	private GUI_CAula guiCAula;
+	private GUI_Subscripcion guiSubscripcion;
 
-	public CAula(){gui = new GUI_CAula(this);}
+	public CAula(){
+		guiCAula = new GUI_CAula(this);}
+
+
 
 	public void CAula(String nombreCentro, String idInterno, Integer aforo, Integer tipoAula) {
 	
@@ -32,6 +36,6 @@ public class CAula implements ICAula {
 	}
 
 	public GUI_CAula getGUI() {
-		return gui;
+		return guiCAula;
 	}
 }

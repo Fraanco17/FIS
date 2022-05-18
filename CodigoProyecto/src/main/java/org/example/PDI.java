@@ -17,7 +17,9 @@ public class PDI extends Observadores {
 	private String codigoTrabajador;
 	private String categoriaPDI;
 	public Aula aulaI;
-	public Actuadores actuadores;
+	//public Actuadores actuadores;
+
+	public PDI(){}
 
 	public PDI(String codigoTrabajador, String categoriaPDI) {
 		this.codigoTrabajador = codigoTrabajador;

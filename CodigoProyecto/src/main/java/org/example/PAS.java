@@ -16,8 +16,9 @@ package org.example;
 public class PAS extends Usuario {
 	private String codigoPersonal;
 	private Integer anioIncorporacion;
-	public Aula aulaD;
+	//public Aula aulaD;
 
+	public PAS(){}
 	public PAS(String codigoPersonal, Integer anioIncorporacion) {
 		this.codigoPersonal = codigoPersonal;
 		this.anioIncorporacion = anioIncorporacion;
