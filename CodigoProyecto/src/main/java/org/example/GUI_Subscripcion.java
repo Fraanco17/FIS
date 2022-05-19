@@ -13,18 +13,16 @@ package org.example;
 
 public class GUI_Subscripcion {
 
-    private Aula controlador;
+    private ICSubscripcion controlador;
 
-    public GUI_Subscripcion(Aula controlador){
+    public GUI_Subscripcion(ICSubscripcion controlador){
         this.controlador = controlador;
     }
-    private final ICUsuario controlador;
-    public GUI_Subscripcion(ICUsuario entrada) {
-        this.controlador = entrada;}
+    //Necesita el constructor de GUI_Subscripcion en CUsuario
 
 
     public void show(){
-        controlador.addObservador(new Observadores());
+       // controlador.addObservador(new Observadores());
 
     }
 

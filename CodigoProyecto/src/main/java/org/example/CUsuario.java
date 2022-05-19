@@ -11,17 +11,35 @@ package org.example;
 //
 
 
+import servidor.Autenticacion;
+import servidor.ObtencionDeRol;
+
 import javax.swing.*;
+import java.util.LinkedList;
+import java.util.List;
 
 public class CUsuario implements ICUsuario {
 	private Usuario usuario;
 	private GUI_CUsuario gui;
+	private List<Usuario> listaUsuarios;
 
 	public CUsuario() {
 		gui=new GUI_CUsuario(this);
+		listaUsuarios=new LinkedList<>();
 	}
 
 	public void CUsuario (String dni, String nombre, String apellidos, String contrasenia) {
+
+		/*if (find(dni) && new Autenticacion().existeCuentaUPM(email))
+		{
+			rol= ObtencionDeRol.get_UPM_AccountRol(email);
+
+		//	if......
+
+			listaUsuarios.add();
+		}*/
+
+
 		usuario.Usuario(dni,nombre,apellidos,contrasenia);
 	}
 

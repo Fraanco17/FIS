@@ -13,16 +13,17 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 
-public class Aula implements IAula {
+public class Aula implements IAula,ICSubscripcion {
 	private String nombreCentro;
 	private String idInterno;
 	private Integer aforo;
 	private Integer tipoAula;
 	private GUI_Subscripcion guiSubscripcion;
-	private ArrayList<Observadores> observadores = new ArrayList();
+	private List<Observadores> observadores = new LinkedList<>();
 	/*public PDI PDI;
-
 	public CAula c_Aula;
 	public PAS PAS;
 	public Elemento elemento;
@@ -83,4 +84,14 @@ public class Aula implements IAula {
 	public void destroy() {
 	
 	}
+
+	@Override
+	public void subscribirUsuario() {
+
+	}
+
+	public void altaAula(){
+
+	}
+
 }
