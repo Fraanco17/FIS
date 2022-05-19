@@ -97,11 +97,6 @@ c
 	}
 
 	public void altaAula(){
-		Scanner sc = new Scanner(System.in);
-		 String nombreCentro = sc.nextLine();
-		 Long idInterno = sc.nextLong();
-		 Integer aforo = sc.nextInt();
-		 Integer tipoAula = sc.nextInt();
 		if((idInterno>0000 && idInterno<5000 )&&!nombreCentro.isEmpty() && (aforo>0)&&(tipoAula==1|| tipoAula == 2 || tipoAula== 3 || tipoAula==4)){
 			c_Aula.addAula(new Aula(nombreCentro,idInterno,aforo,tipoAula));
 		}
