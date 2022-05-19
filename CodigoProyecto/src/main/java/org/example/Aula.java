@@ -88,19 +88,35 @@ public class Aula implements IAula,ICSubscripcion {
 
 	}
 
-	public void altaAula(){
-		Aula aula = new Aula();
+	public void altaAula() {
+
+		System.out.println("Ha elegido la opcion 'Dar de alta un aula'. Para salir de este menu introduzca 'salir'.\n" +
+				"Introduzca los datos siguientes datos: ");
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Ha elegido la opcion 'Dar de alta un aula'. Introduzca los datos siguientes datos: " +
-				"\nNombre del centro: ");
-		aula.nombreCentro=sc.nextLine();
-		System.out.println("\nIdentificador interno: ");
-		aula.idInterno=sc.nextLine();
-		System.out.println("\nAforo: ");
-		aula.aforo=sc.nextInt();
-		System.out.println("\nTipo de aula: ");
-		aula.tipoAula=sc.nextInt();
-		listaAula.add(aula);
+		Scanner cs = new Scanner(System.in);
+		String var = "SI";
+		while(!var.equals("NO")) {
+			Aula aula = new Aula();
+			System.out.print("Nombre del centro: ");
+			aula.setNombreCentro(sc.nextLine());
+			System.out.println("\nIdentificador interno: ");
+			aula.setIdInterno(sc.nextLine());
+			System.out.println("\nAforo: ");
+			aula.setAforo(sc.nextInt());
+			System.out.println("\nTipo de aula: ");
+			aula.setTipoAula(sc.nextInt());
+			sc.nextLine();
+			System.out.println("Añadido a la lista.");
+			listaAula.add(aula);
+			System.out.println("Seguir? SI/NO");
+			var = sc.nextLine();
+		}
+
+		for( int i=0 ;  i<=listaAula.size() ; i++) show(listaAula.get(i));
+	}
+
+	public void show(Aula aula){
+		System.out.println("Nombre" + aula.getNombreCentro() + "\nAforo" + aula.getAforo());
 	}
 
 }
