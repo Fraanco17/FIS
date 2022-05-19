@@ -11,8 +11,6 @@ package org.example;
 //
 
 
-import java.util.Scanner;
-
 public class GUI_Subscripcion {
 
     private Aula controlador;
@@ -20,6 +18,10 @@ public class GUI_Subscripcion {
     public GUI_Subscripcion(Aula controlador){
         this.controlador = controlador;
     }
+    private final ICUsuario controlador;
+    public GUI_Subscripcion(ICUsuario entrada) {
+        this.controlador = entrada;}
+
 
     public void show(){
         controlador.addObservador(new Observadores());
