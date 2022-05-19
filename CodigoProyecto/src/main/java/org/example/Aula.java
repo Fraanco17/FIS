@@ -11,10 +11,7 @@ package org.example;
 //
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Aula implements IAula,ICSubscripcion {
 	private String nombreCentro;
@@ -23,6 +20,7 @@ public class Aula implements IAula,ICSubscripcion {
 	private Integer tipoAula;
 	private GUI_Subscripcion guiSubscripcion;
 	private List<Observadores> observadores = new LinkedList<>();
+	private List<Aula> listaAula= new LinkedList<>();
 	/*public PDI PDI;
 	public CAula c_Aula;
 	public PAS PAS;
@@ -91,7 +89,18 @@ public class Aula implements IAula,ICSubscripcion {
 	}
 
 	public void altaAula(){
-
+		Aula aula = new Aula();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Ha elegido la opcion 'Dar de alta un aula'. Introduzca los datos siguientes datos: " +
+				"\nNombre del centro: ");
+		aula.nombreCentro=sc.nextLine();
+		System.out.println("\nIdentificador interno: ");
+		aula.idInterno=sc.nextLine();
+		System.out.println("\nAforo: ");
+		aula.aforo=sc.nextInt();
+		System.out.println("\nTipo de aula: ");
+		aula.tipoAula=sc.nextInt();
+		listaAula.add(aula);
 	}
 
 }
