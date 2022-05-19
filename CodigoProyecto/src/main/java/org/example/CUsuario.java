@@ -46,7 +46,9 @@ public class CUsuario implements ICUsuario {
 	public Usuario obtener() {
 		return usuario;
 	}
-	public void getGUI_CUsuario(){};
+	public void getGUI_CUsuario(){
+
+	};
 
 	public void destroy() {
 		usuario.destroy();

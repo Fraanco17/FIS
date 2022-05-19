@@ -18,12 +18,11 @@ public class GUI_Subscripcion {
     public GUI_Subscripcion(ICSubscripcion controlador){
         this.controlador = controlador;
     }
-    //Necesita el constructor de GUI_Subscripcion en CUsuario
+    // Necesita el constructor de GUI_Subscripcion en CUsuario
 
 
     public void show(){
-       // controlador.addObservador(new Observadores());
-
+      // controlador.addObservador(new Observadores());
     }
 
 
