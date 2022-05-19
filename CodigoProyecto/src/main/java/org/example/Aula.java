@@ -15,14 +15,15 @@ import java.util.*;
 
 public class Aula implements IAula,ICSubscripcion {
 	private String nombreCentro;
-	private String idInterno;
+	private Long idInterno;
 	private Integer aforo;
 	private Integer tipoAula;
 	private GUI_Subscripcion guiSubscripcion;
 	private List<Observadores> observadores = new LinkedList<>();
 	private List<Aula> listaAula= new LinkedList<>();
-	/*public PDI PDI;
 	public CAula c_Aula;
+	/*public PDI PDI;
+c
 	public PAS PAS;
 	public Elemento elemento;
 	public void monitorizarSensores() {
@@ -33,6 +34,12 @@ public class Aula implements IAula,ICSubscripcion {
 	public Aula() {
 		guiSubscripcion=new GUI_Subscripcion(this);
 	}
+
+	public void Aula(String nombreCentro, Long idInterno, Integer aforo, Integer tipoAula) {
+		//llama al constructor (no se pa q )
+	}
+
+
 	public String getNombreCentro() {
 		return nombreCentro;
 	}
@@ -41,11 +48,11 @@ public class Aula implements IAula,ICSubscripcion {
 		this.nombreCentro = nombreCentro;
 	}
 
-	public String getIdInterno() {
+	public Long getIdInterno() {
 		return idInterno;
 	}
 
-	public void setIdInterno(String idInterno) {
+	public void setIdInterno(Long idInterno) {
 		this.idInterno = idInterno;
 	}
 
@@ -69,14 +76,15 @@ public class Aula implements IAula,ICSubscripcion {
 		observadores.add(observador);
 	}
 
-	@Override
-	public void Aula(String nombreCentro, String idInterno, Integer aforo, Integer tipoAula){
-			this.nombreCentro = nombreCentro;
-			this.idInterno = idInterno;
-			this.aforo = aforo;
-			this.tipoAula = tipoAula;
-		}
 
+
+
+	public  Aula(String nombreCentro, Long idInterno, Integer aforo, Integer tipoAula) {
+		this.nombreCentro = nombreCentro;
+		this.idInterno = idInterno;
+		this.aforo = aforo;
+		this.tipoAula = tipoAula;
+	}
 
 	@Override
 	public void destroy() {
@@ -89,18 +97,14 @@ public class Aula implements IAula,ICSubscripcion {
 	}
 
 	public void altaAula(){
-		Aula aula = new Aula();
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Ha elegido la opcion 'Dar de alta un aula'. Introduzca los datos siguientes datos: " +
-				"\nNombre del centro: ");
-		aula.nombreCentro=sc.nextLine();
-		System.out.println("\nIdentificador interno: ");
-		aula.idInterno=sc.nextLine();
-		System.out.println("\nAforo: ");
-		aula.aforo=sc.nextInt();
-		System.out.println("\nTipo de aula: ");
-		aula.tipoAula=sc.nextInt();
-		listaAula.add(aula);
+		 String nombreCentro = sc.nextLine();
+		 Long idInterno = sc.nextLong();
+		 Integer aforo = sc.nextInt();
+		 Integer tipoAula = sc.nextInt();
+		if((idInterno>0000 && idInterno<5000 )&&!nombreCentro.isEmpty() && (aforo>0)&&(tipoAula==1|| tipoAula == 2 || tipoAula== 3 || tipoAula==4)){
+			c_Aula.addAula(new Aula(nombreCentro,idInterno,aforo,tipoAula));
+		}
 	}
 
 }

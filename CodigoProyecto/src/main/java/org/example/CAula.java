@@ -11,10 +11,11 @@ package org.example;
 //
 
 
-
+import java.util.LinkedList;
+import java.util.List;
 
 public class CAula implements ICAula {
-	public Aula Aula;
+	public List<Aula> aulas = new LinkedList();
 	private GUI_CAula guiCAula;
 
 
@@ -37,5 +38,8 @@ public class CAula implements ICAula {
 
 	public GUI_CAula getGUI() {
 		return guiCAula;
+	}
+	public void addAula(Aula aula){
+		aulas.add(aula);
 	}
 }

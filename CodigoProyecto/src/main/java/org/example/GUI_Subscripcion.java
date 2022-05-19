@@ -22,7 +22,7 @@ public class GUI_Subscripcion {
 
 
     public void show(){
-      // controlador.addObservador(new Observadores());
+      controlador.subscribirUsuario();
     }
 
 

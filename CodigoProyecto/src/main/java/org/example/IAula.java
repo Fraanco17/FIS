@@ -14,6 +14,6 @@ package org.example;
 
 
 public interface IAula {
-	void Aula(String nombreCentro, String idInterno, Integer aforo, Integer tipoAula);
+	void Aula(String nombreCentro, Long idInterno, Integer aforo, Integer tipoAula);
 	void destroy();
 }

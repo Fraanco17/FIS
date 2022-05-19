@@ -106,7 +106,7 @@ public class Usuario implements IUsuario {
 				altaPDI();
 				break;
 			default:
-				System.out.println("Error puta");
+				System.out.println("Error, malformación del texto");
 		}
 	}
 
