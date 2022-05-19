@@ -10,6 +10,8 @@ package org.example;
 //
 //
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -20,6 +22,8 @@ public class Usuario implements IUsuario {
 	private String apellidos;
 	private String contrasenia;
 	public CUsuario cUsuario;
+	private List<Usuario> usuarios;
+
 	public void registrarse() {
 
 	}
@@ -32,6 +36,7 @@ public class Usuario implements IUsuario {
 		this.nombre=nombre;
 		this.apellidos=apellidos;
 		this.contrasenia=contrasenia;
+		this.usuarios = new LinkedList();
 	}
 
 	public void cambiarContrasenia(String dniIN) {
@@ -114,6 +119,7 @@ public class Usuario implements IUsuario {
 		alum.setApellidos(sc.nextLine());
 		alum.setNumeroMatricula(sc.nextLine());
 		alum.setContrasenia(sc.nextLine());
+		usuarios.add(alum);
 	}
 
 	private void altaPAS(){
@@ -125,6 +131,7 @@ public class Usuario implements IUsuario {
 		pas.setApellidos(sc.nextLine());
 		pas.setCodigoPersonal(sc.nextLine());
 		pas.setAnioIncorporacion(sc.nextInt());
+		usuarios.add(pas);
 	}
 
 	private void altaPDI(){
@@ -136,6 +143,7 @@ public class Usuario implements IUsuario {
 		pdi.setApellidos(sc.nextLine());
 		pdi.setCodigoTrabajador(sc.nextLine());
 		pdi.setCategoriaPDI(sc.nextLine());
+		usuarios.add(pdi);
 	}
 
 	@Override
