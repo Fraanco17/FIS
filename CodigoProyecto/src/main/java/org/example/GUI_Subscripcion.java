@@ -16,9 +16,8 @@ import java.util.Scanner;
 public class GUI_Subscripcion {
     private final ICUsuario controlador;
     public GUI_CUsuario(ICUsuario entrada) {
- this.controlador = entrada;
+        this.controlador = entrada;}
 
-}
 
     public void show(){
 
